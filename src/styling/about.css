@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .App {
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust the gap value to your preference */
+    width: 100%;
+  }
+  
+  .photo-container {
+    flex: 1;
+    position: relative;
+    text-align: left; /* Align content to the left */
+  }
+  
+  .photo-title {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Move title completely to the left */
+    transform: translateY(-50%);
+    color: palevioletred;
+    font-size: 30px; /* Adjusted font size */
+    font-weight: bold;
+    font-family: "Lucida Handwriting";
+    background-color: black;
+    padding: 5px 10px; /* Reduced padding */
+  }
+  
+  .photo {
+    width: 100%;
+    height: auto; /* Ensure the height is responsive */
+    object-fit: cover;
+    border: 2px solid black;
+    margin: auto;
+  }
+  
+  .homepage-description-box {
+    flex: 1;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: palevioletred;
+    text-align: left; /* Align content to the left */
+  }
+  
+  .homepage-description {
+    font-size: medium; /* Adjust font size */
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+  }
+  

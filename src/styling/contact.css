@@ -1,0 +1,44 @@
+#contact-page {
+    background: palevioletred;
+    background-repeat: no-repeat;
+    height: 140vh;
+    width: 100vw;
+  }
+  
+  #contact {
+    position: absolute;
+    top: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: pink;
+    padding: 20px;
+  }
+  
+  .name,
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid palevioletred;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background-color: palevioletred;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: palevioletred;
+  }
+  
