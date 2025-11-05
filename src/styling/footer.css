@@ -1,76 +1,187 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    width: 100vw;
-    border-top: solid black;
+    align-items: stretch;
+    position: relative;
+    min-height: 120px;
+    width: 100%;
+    border-top: 3px solid palevioletred;
+    background-color: black;
+    color: white;
     z-index: 3;
-    margin-top: 50px;
+    margin-top: auto; /* This pushes footer to bottom */
+    padding: 20px 0;
   }
   
   #sct1 {
     width: 33%;
-    background-color: whitesmoke;
-    font-family: "Courier New", Courier, monospace;
+    background-color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   #sct1-txt {
-    margin-left: 5px;
-    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: palevioletred;
   }
   
   #sct2 {
     width: 33%;
-    background-color: whitesmoke;
-    font-family: "Courier New", Courier, monospace;
+    background-color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
     text-align: center;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  #sct2 > :first-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: palevioletred;
+    margin: 0 0 5px 0;
   }
   
   #sct3 {
     width: 33%;
-    background-color: whitesmoke;
-    font-family: "Courier New", Courier, monospace;
+    background-color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   #newsletter {
     display: flex;
+    gap: 8px;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
   }
   
   #input1 {
-    font-size: 10px;
-    height: 30%;
-    width: 60%;
-    margin-left: auto;
-    margin-bottom: 9px;
+    font-size: 12px;
+    padding: 8px 12px;
+    border: 2px solid palevioletred;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  #input1:focus {
+    outline: none;
+    border-color: pink;
+    box-shadow: 0 0 5px rgba(219, 112, 147, 0.5);
   }
   
   #button1 {
-    font-size: 8px;
-    height: 20px;
-    width: 40px;
-    margin-right: auto;
-    margin-bottom: 9px;
+    font-size: 12px;
+    padding: 8px 15px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  #button1:hover {
+    background-color: pink;
+    color: black;
+    transform: translateY(-1px);
   }
   
   p {
-    font-size: 8px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    font-size: 12px;
+    margin: 5px 0;
+    color: #ccc;
   }
   
+  #footerlist1,
   #footerlist2 {
-    margin-top: 0px;
-    margin-right: 7px;
-    text-align: right;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
   }
   
   #footerlist1 {
-    font-size: 10px;
-    margin-top: 0px;
     text-align: left;
-    list-style-type: none;
+  }
+  
+  #footerlist2 {
+    text-align: right;
+  }
+  
+  #footerlist1 li,
+  #footerlist2 li {
+    margin: 8px 0;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  #footerlist1 li:hover,
+  #footerlist2 li:hover {
+    color: palevioletred;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      min-height: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #sct1,
+    #sct2,
+    #sct3 {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+    
+    #newsletter {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    #input1 {
+      min-width: 200px;
+      max-width: 100%;
+    }
+    
+    #footerlist1,
+    #footerlist2 {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 15px;
+    }
+    
+    #sct1-txt,
+    #sct2 > :first-child {
+      font-size: 14px;
+    }
+    
+    #input1 {
+      min-width: 150px;
+    }
   }

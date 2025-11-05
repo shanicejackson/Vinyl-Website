@@ -11,21 +11,24 @@ const Hero = () => {
   return (
     <>
       <div id="hero">
+        <h1 id="hero-title">Vinyl</h1>
+        <h3 id="hero-promo">Find all your Favorite Songs!</h3>
+        
         <div id="buy">
-          <input className="Vinyl-search" placeholder="Album"></input>
+          <input className="Vinyl-search" placeholder="Search Album"></input>
           <input
-            id="Date Album was Made"
             className="Date-search"
             type="date"
+            placeholder="Release Date"
           ></input>
           <button id="date-btn">Search</button>
         </div>
-        <h3 id="hero-promo">!Find all your Favorite Songs!</h3>
+        
         <button id="shop-now" onClick={handleShopNowClick}>
           Shop Now
         </button>
-        <h3 id="hero-promo">!Shop Now!</h3>
-        <h1 id="hero-title">Vinyl</h1>
+        
+        <p className="hero-subtitle">Discover Amazing Vinyl Collections</p>
       </div>
     </>
   );

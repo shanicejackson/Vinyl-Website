@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import NavBar from "../components/nav"; 
+import React, { useState } from "react"; 
 
 const PAGE_PRODUCTS = "products";
 const PAGE_CART = "cart";
@@ -88,10 +87,9 @@ const Booking = () => {
   );
 
   return (
-    <div className="main">
+    <div className="library-page">
       {renderProducts()}
       {page === PAGE_CART && renderCart()}
-      <NavBar length={cartList.length} />
     </div>
   );
 };

@@ -6,15 +6,15 @@ const NavBar = () => {
     <>
       <div className="nav">
         <div className="nav-items">
-          {/* <img className="icons" src={logo} alt=""></img> */}
-          <input
-            type="text"
-            className="search-box"
-            placeholder="search"
-          ></input>
-          <button className="search-btn">search</button>
-          {/* <img className="icons" src={acct} alt=""></img>
-          <img className="icons" src={cart} alt=""></img> */}
+          <div className="nav-brand">Nene's Vinyls</div>
+          <div className="search-container">
+            <input
+              type="text"
+              className="search-box"
+              placeholder="Search albums, artists..."
+            ></input>
+            <button className="search-btn">Search</button>
+          </div>
         </div>
         <div id="links">
           <Link className="navlink" to="/home">
