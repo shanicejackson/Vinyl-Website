@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const NavBar = () => {
+  const { getCartItemCount } = useCart();
+  
   return (
     <>
       <div className="nav">
@@ -17,18 +20,25 @@ const NavBar = () => {
           </div>
         </div>
         <div id="links">
-          <Link className="navlink" to="/home">
-            Home
-          </Link>
-          <Link className="navlink" to="/library">
-            Library
-          </Link>
-          <Link className="navlink" to="/about">
-            About Us
-          </Link>
-          <Link className="navlink" to="/contact">
-            Contact
-          </Link>
+          <div className="nav-links-left">
+            <Link className="navlink" to="/home">
+              Home
+            </Link>
+            <Link className="navlink" to="/library">
+              Library
+            </Link>
+            <Link className="navlink" to="/about">
+              About Us
+            </Link>
+            <Link className="navlink" to="/contact">
+              Contact
+            </Link>
+          </div>
+          <div className="cart-nav">
+            <Link className="navlink cart-link" to="/cart">
+              Cart ({getCartItemCount()})
+            </Link>
+          </div>
         </div>
       </div>
     </>

@@ -13,12 +13,19 @@
   
   .nav-items {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     height: 40px;
     background: rgba(219, 112, 147, 0.1);
     border-bottom: 1px solid palevioletred;
+  }
+
+  .nav-brand {
+    color: palevioletred;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
   
   .search-container {
@@ -72,9 +79,29 @@
     height: 40px;
     background: linear-gradient(135deg, palevioletred 0%, #db7093 100%);
     align-items: center;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
     padding: 0 20px;
+    position: relative;
+  }
+  
+  .nav-links-left {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .cart-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .cart-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
   
   .navlink {

@@ -8,6 +8,7 @@ import "./styling/library.css";
 import "./styling/contact.css";
 import "./styling/hero.css";
 import "./styling/featured.css";
+import "./styling/cart.css";
 
 import About from "./pages/about";
 import Cart from "./pages/cart";
@@ -18,23 +19,26 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/nav";
 import Footer from "./components/footer";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="main">
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/library" element={<Library />} />
-          </Routes>
-          <Footer />
-        </div>
+        <CartProvider>
+          <div className="main">
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/library" element={<Library />} />
+            </Routes>
+            <Footer />
+          </div>
+        </CartProvider>
       </BrowserRouter>
     </>
   );
