@@ -9,12 +9,15 @@ import "./styling/contact.css";
 import "./styling/hero.css";
 import "./styling/featured.css";
 import "./styling/cart.css";
+import "./styling/checkout.css";
 
 import About from "./pages/about";
 import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Library from "./pages/library";
+import OrderSuccess from "./pages/order-success";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/nav";
@@ -33,8 +36,10 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/library" element={<Library />} />
+              <Route path="/order-success" element={<OrderSuccess />} />
             </Routes>
             <Footer />
           </div>
